@@ -1,12 +1,19 @@
+import React from "react"
 
-function App() {
+import { About, Footer, Header, Skills, Work } from './container'
+import { Navbar } from "./componenets"
+import './App.scss'
 
+const App = () => {
   return (
-    <>
-      <div>
-
-      </div>
-    </>
+    <div className="app">
+      <Navbar></Navbar>
+      <Header></Header>
+      <About></About>
+      <Work></Work>
+      <Skills></Skills>
+      <Footer></Footer>
+    </div>
   )
 }
 
