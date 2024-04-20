@@ -7,6 +7,8 @@ import sass from "../../assets/sass.png"
 import react from "../../assets/react.png"
 import './Header.scss'
 
+import { AppWrap } from '../../wrapper/AppWrap'
+
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -18,7 +20,7 @@ const scaleVariants = {
   }
 }
 
-export const Header = () => {
+const Header = () => {
   return (
     <div className='app__header app__flex'>
       <motion.div
@@ -70,3 +72,4 @@ export const Header = () => {
     </div>
   )
 }
+export default AppWrap(Header, 'home')
