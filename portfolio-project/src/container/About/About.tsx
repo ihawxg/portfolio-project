@@ -2,6 +2,7 @@ import React, { ImgHTMLAttributes, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { urlFor, client } from '../../client'
 import { SanityImageSource } from '@sanity/image-url/lib/types/types'
+import { AppWrap } from '../../wrapper/AppWrap'
 import './About.scss'
 
 interface abouts {
@@ -10,7 +11,7 @@ interface abouts {
   imgUrl: string | SanityImageSource
 }
 
-export const About = () => {
+const About = () => {
 
   const [abouts, setAbouts] = useState<abouts[]>([])
 
@@ -24,7 +25,7 @@ export const About = () => {
 
   return (
     <div>
-      <h2 className='head-text'>I Know That <span>Good Design</span> <br /> means <span>Good Business</span></h2>
+      <h2 className='head-text'>I Know That <span>Good Development</span> <br /> means <span>Good Business</span></h2>
       <div className='app__profiles'>
         {abouts.map((about, index) =>
           <motion.div
@@ -43,3 +44,5 @@ export const About = () => {
     </div>
   )
 }
+
+export default AppWrap(About, 'about')
