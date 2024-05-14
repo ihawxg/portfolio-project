@@ -3,7 +3,7 @@ import { SocialMedia } from '../componenets';
 import { NavigationDots } from '../componenets';
 
 interface AppWrapProps {
-  idName: string;
+  idName?: string;
   classNames?: string;
 }
 
